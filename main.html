@@ -527,5 +527,25 @@
     <p id="alert-message"></p>
 </div>
 <script src="main.js"></script>
+ <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+
+    <script>
+        new CozeWebSDK.WebChatClient({
+
+        config: {
+        type: 'bot',
+        bot_id: '7573626748227616821',
+        isIframe: false,
+        },
+
+        auth: {
+        type: 'token',
+        token: 'pat_Ehq9D3fhPg4nAKgS05CYg5VzcyHYa1BkpEe0lpXyWdFzpFPczJDDfojMhJakNHqZ',
+        onRefreshToken: async () => 'token'
+        },
+
+    });
+    </script>
+
 </body>
 </html>
