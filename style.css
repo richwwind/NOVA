@@ -50,8 +50,7 @@ html{
 
 
 @keyframes float-up {
-     0%   { transform: translate(-30%, 20px); opacity: 0; }
+    0%   { transform: translateY(0) scale(0.8); opacity: 0; }
   15%  { opacity: 1; }
-  60%  { transform: translate(-30%, -140px); opacity: 1; }
-  100% { transform: translate(-30%, -220px); opacity: 0; }
+  100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
 }
