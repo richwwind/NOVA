@@ -11,7 +11,7 @@
     <!-- Tải thư viện icon (Lucide) -->
     <script src="https://unpkg.com/lucide-react@0.379.0/dist/lucide-react.js"></script>
     <script src="https://unpkg.com/lucide-react@0.379.0/dist/lucide-react.js"></script>
-    <link rel="stylesheet" href="style-AItrainer.css">
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -90,15 +90,14 @@
 <main>
 
     <!-- 🏠 Trang chủ (Home) -->
-    <section id="home" class="page active">
+    <section id="home">
         <!-- Hero Section -->
         <div class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
             <!-- Ảnh nền -->
             <img src="https://placehold.co/1920x1080/A7F3D0/1E3A8A?text=Toan+Canh+Ngu+Hanh+Son+(Chinh+Mau+Pastel)"
                  alt="Toàn cảnh Ngũ Hành Sơn"
                  class="absolute inset-0 w-full h-full object-cover z-0"
-                 onerror="this.src='https://placehold.co/1920x1080/A7F3D0/1E3A8A?text=Loi+Tai+Anh'">
-            <!-- Lớp phủ mờ -->
+            />
             <div class="absolute inset-0 bg-black opacity-30 z-10"></div>
 
             <!-- Nội dung Slogan -->
@@ -242,7 +241,7 @@
     </section>
 
     <!-- 🪷 Trang Khám phá (Explore) -->
-    <section id="explore" class="page pt-28 pb-20 bg-white">
+    <section id="explore" class="pt-28 pb-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🪷 Khám phá 5 Hành</h2>
@@ -320,7 +319,7 @@
     </section>
 
     <!-- 🧳 Trang Dịch vụ & Tour (Tour & Service) -->
-    <section id="tours" class="page pt-28 pb-20">
+    <section id="tours" class="pt-28 pb-20">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🧳 Gói Dịch vụ & Tour</h2>
@@ -382,7 +381,7 @@
     </section>
 
     <!-- 🎮 Trang Quiz / Mini game -->
-    <section id="quiz" class="page pt-28 pb-20 bg-white">
+    <section id="quiz" class="pt-28 pb-20 bg-white">
         <div class="container mx-auto px-6 max-w-2xl">
             <div id="quiz-container" class="bg-theme-light p-8 md:p-12 rounded-2xl shadow-xl text-center">
 
@@ -447,7 +446,7 @@
     </section>
 
     <!-- 📞 Liên hệ (Contact) -->
-    <section id="contact" class="page pt-28 pb-20 bg-white">
+    <section id="contact" class="pt-28 pb-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">📞 Liên hệ với Chúng mình</h2>
@@ -527,343 +526,6 @@
 <div id="alert-modal" class="fixed bottom-6 right-6 z-[150] bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl hidden transition-all duration-300" style="transform: translateY(20px); opacity: 0;">
     <p id="alert-message"></p>
 </div>
-
-
-<!-- JavaScript -->
-<script>
-    // === Dữ liệu cho Quiz ===
-    const quizData = [
-        {
-            question: "Khi đi du lịch, bạn ưu tiên điều gì nhất?",
-            options: [
-                { text: "Chụp thật nhiều ảnh đẹp, 'sống ảo'", scores: { fire: 2, metal: 1 } },
-                { text: "Tìm hiểu văn hóa, lịch sử, truyền thuyết", scores: { water: 2, wood: 1 } },
-                { text: "Tìm một góc yên tĩnh để thư giãn, thiền định", scores: { metal: 2, water: 1 } },
-                { text: "Thử các hoạt động mạo hiểm, khám phá", scores: { earth: 2, fire: 1 } },
-                { text: "Mua sắm đồ thủ công, quà lưu niệm", scores: { wood: 2, earth: 1 } }
-            ]
-        },
-        {
-            question: "Bạn bị thu hút bởi kiểu không gian nào?",
-            options: [
-                { text: "Hang động kỳ bí, huyền ảo", scores: { water: 2, earth: 1 } },
-                { text: "Chùa chiền cổ kính, linh thiêng", scores: { water: 2, metal: 1 } },
-                { text: "Vách đá hùng vĩ, nơi ngắm hoàng hôn", scores: { fire: 2, earth: 1 } },
-                { text: "Làng nghề thủ công nhộn nhịp, sáng tạo", scores: { wood: 2, metal: 1 } }
-            ]
-        },
-        {
-            question: "Màu sắc yêu thích của bạn trong nhóm này là?",
-            options: [
-                { text: "Hồng, Đỏ, Cam (Gam nóng)", scores: { fire: 2 } },
-                { text: "Trắng, Vàng nhạt, Bạc (Gam sáng)", scores: { metal: 2 } },
-                { text: "Xanh lá, Nâu (Gam tự nhiên)", scores: { wood: 2, earth: 1 } },
-                { text: "Xanh dương, Đen (Gam sâu lắng)", scores: { water: 2 } }
-            ]
-        },
-        {
-            question: "Buổi tối lý tưởng của bạn là...",
-            options: [
-                { text: "Một buổi tiệc sôi động cùng bạn bè", scores: { fire: 2, wood: 1 } },
-                { text: "Ngồi thiền, viết nhật ký hoặc đọc sách", scores: { metal: 2, water: 1 } },
-                { text: "Trò chuyện sâu sắc, ý nghĩa bên gia đình", scores: { water: 2, earth: 1 } },
-                { text: "Thử một công thức nấu ăn mới (ấm áp)", scores: { earth: 2 } }
-            ]
-        },
-        {
-            question: "Bạn thấy mình giống...?",
-            options: [
-                { text: "Ngọn lửa nhiệt huyết", scores: { fire: 2 } },
-                { text: "Dòng nước mềm mại", scores: { water: 2 } },
-                { text: "Cái cây vững chãi", scores: { wood: 2 } },
-                { text: "Viên kim loại sáng tạo", scores: { metal: 2 } },
-                { text: "Mặt đất ấm áp", scores: { earth: 2 } }
-            ]
-        }
-    ];
-
-    const quizResults = {
-        wood: {
-            title: "Bạn là HÀNH MỘC 🌿",
-            icon: "🌿",
-            color: "text-theme-primary",
-            description: "Bạn yêu thiên nhiên, sáng tạo và luôn phát triển. Giống như Mộc Sơn, bạn là người gắn kết, mang lại sức sống và là cái nôi của những ý tưởng mới.",
-            suggestion: "Trải nghiệm 'Tour Làng nghề Non Nước' và tự tay làm vòng đá chắc chắn sẽ hợp với bạn!"
-        },
-        fire: {
-            title: "Bạn là HÀNH HỎA 🔥",
-            icon: "🔥",
-            color: "text-theme-fire",
-            description: "Bạn năng động, nhiệt huyết và luôn là trung tâm của mọi cuộc vui. Bạn tỏa sáng rực rỡ và truyền cảm hứng cho người khác, như vẻ đẹp của Hỏa Sơn lúc hoàng hôn.",
-            suggestion: "Bạn sinh ra để 'sống ảo'! 'Tour Chụp ảnh' tại Hỏa Sơn là dành cho bạn!"
-        },
-        earth: {
-            title: "Bạn là HÀNH THỔ 🌾",
-            icon: "🌾",
-            color: "text-theme-earth",
-            description: "Bạn ấm áp, đáng tin cậy và là chỗ dựa vững chắc cho mọi người. Bạn kiên nhẫn, nuôi dưỡng và bao dung như ngọn Thổ Sơn hiền hòa.",
-            suggestion: "Bạn hợp với 'Tour Khám phá Mạo hiểm' để khám phá những hang động ẩn sâu trong lòng đất mẹ."
-        },
-        metal: {
-            title: "Bạn là HÀNH KIM ✨",
-            icon: "✨",
-            color: "text-theme-accent",
-            description: "Bạn sắc sảo, tinh tế, sáng tạo và có tổ chức. Bạn tìm kiếm sự tĩnh tại và vẻ đẹp thuần khiết, giống như không gian thanh tịnh của Kim Sơn.",
-            suggestion: "Một 'Tour Thiền & Yoga' tại Kim Sơn sẽ giúp bạn nạp lại năng lượng sáng tạo."
-        },
-        water: {
-            title: "Bạn là HÀNH THỦY 🌊",
-            icon: "🌊",
-            color: "text-theme-secondary",
-            description: "Bạn mềm mại, sâu sắc, linh hoạt và giàu lòng trắc ẩn. Bạn có khả năng thích nghi cao và mang một chiều sâu tâm hồn, giống như Thủy Sơn linh thiêng.",
-            suggestion: "'Tour Tâm linh' ghé thăm chùa Linh Ứng và động Huyền Không sẽ chạm đến tâm hồn bạn."
-        }
-    };
-
-    let currentQuestionIndex = 0;
-    let userScores = { wood: 0, fire: 0, earth: 0, metal: 0, water: 0 };
-    let finalResult = ''; // Dùng để chia sẻ
-
-    // === Logic Điều hướng Trang (SPA) ===
-    const navLinks = document.querySelectorAll('.nav-link');
-    const pages = document.querySelectorAll('.page');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-
-    function showPage(pageId, clickedLink = null, isMobile = false) {
-// Ẩn tất cả các trang
-        pages.forEach(page => {
-            page.classList.remove('active');
-        });
-
-// Hiển thị trang được chọn
-        const activePage = document.getElementById(pageId);
-        if (activePage) {
-            activePage.classList.add('active');
-        }
-
-// Cập nhật trạng thái 'active' cho link điều hướng
-        navLinks.forEach(link => {
-            link.classList.remove('active', 'font-bold', 'text-theme-primary');
-            if (!link.classList.contains('bg-theme-primary')) {
-                link.classList.add('text-gray-600');
-            }
-        });
-
-        if (clickedLink) {
-            clickedLink.classList.add('active', 'font-bold', 'text-theme-primary');
-            clickedLink.classList.remove('text-gray-600');
-        } else {
-// Tìm link tương ứng nếu không bấm trực tiếp (ví dụ: nút logo)
-            document.querySelector(`.nav-link[onclick*="'${pageId}'"]`)?.classList.add('active', 'font-bold', 'text-theme-primary');
-        }
-
-// Đóng menu mobile nếu đang mở
-        if (isMobile) {
-            mobileMenu.classList.add('hidden');
-        }
-
-// Cuộn lên đầu trang
-        window.scrollTo(0, 0);
-
-// Ngăn hành vi mặc định của thẻ <a>
-// SỬA LỖI: Thêm kiểm tra "if (event)"
-// Lỗi xảy ra vì khi gọi showPage('home') lúc khởi chạy, "event" không tồn tại (undefined).
-        if (event) {
-            event.preventDefault();
-        }
-    }
-
-    // Xử lý menu mobile
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Xử lý hiệu ứng thanh điều hướng khi cuộn
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('nav-scrolled');
-        } else {
-            header.classList.remove('nav-scrolled');
-        }
-    });
-
-    // === Logic hiệu ứng cuộn cho Trang chủ ===
-    const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                scrollObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-        scrollObserver.observe(el);
-    });
-
-    // === Logic Modal Đặt Tour ===
-    const tourModal = document.getElementById('tour-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const tourNameInput = document.getElementById('tour-name-input');
-    const tourForm = document.getElementById('tour-form');
-
-    function openTourModal(tourName) {
-        modalTitle.innerText = `Đặt ${tourName}`;
-        tourNameInput.value = tourName;
-        tourModal.classList.remove('hidden');
-    }
-
-    function closeTourModal() {
-        tourModal.classList.add('hidden');
-    }
-
-    tourForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        closeTourModal();
-// Hiển thị thông báo (thay vì alert)
-        showAlert('Đăng ký thành công! Chúng mình sẽ liên hệ bạn ngay nhé!');
-        tourForm.reset();
-    });
-
-    // === Logic Thông báo Chung (Thay thế alert) ===
-    const alertModal = document.getElementById('alert-modal');
-    const alertMessage = document.getElementById('alert-message');
-    let alertTimeout;
-
-    function showAlert(message) {
-        alertMessage.innerText = message;
-        alertModal.classList.remove('hidden');
-// Xóa các class cũ để reset animation
-        alertModal.style.opacity = '0';
-        alertModal.style.transform = 'translateY(20px)';
-
-// Trigger reflow
-        void alertModal.offsetWidth;
-
-// Thêm class để chạy animation
-        alertModal.style.opacity = '1';
-        alertModal.style.transform = 'translateY(0)';
-
-// Tự động ẩn sau 3 giây
-        clearTimeout(alertTimeout);
-        alertTimeout = setTimeout(() => {
-            alertModal.style.opacity = '0';
-            alertModal.style.transform = 'translateY(20px)';
-            setTimeout(() => alertModal.classList.add('hidden'), 300);
-        }, 3000);
-    }
-
-    // === Logic Quiz ===
-    const quizStartEl = document.getElementById('quiz-start');
-    const quizQuestionEl = document.getElementById('quiz-question-area');
-    const quizResultEl = document.getElementById('quiz-result-area');
-    const questionTextEl = document.getElementById('question-text');
-    const optionsContainerEl = document.getElementById('options-container');
-    const progressTextEl = document.getElementById('question-progress');
-
-    const resultTitleEl = document.getElementById('result-title');
-    const resultIconEl = document.getElementById('result-icon');
-    const resultDescriptionEl = document.getElementById('result-description');
-    const resultSuggestionEl = document.getElementById('result-suggestion');
-
-    function startQuiz() {
-        currentQuestionIndex = 0;
-        userScores = { wood: 0, fire: 0, earth: 0, metal: 0, water: 0 };
-        quizStartEl.classList.add('hidden');
-        quizResultEl.classList.add('hidden');
-        quizQuestionEl.classList.remove('hidden');
-        displayQuestion();
-    }
-
-    function displayQuestion() {
-        const question = quizData[currentQuestionIndex];
-        progressTextEl.innerText = `Câu ${currentQuestionIndex + 1}/${quizData.length}`;
-        questionTextEl.innerText = question.question;
-        optionsContainerEl.innerHTML = '';
-
-        question.options.forEach(option => {
-            const button = document.createElement('button');
-            button.innerText = option.text;
-            button.className = "w-full text-left bg-white p-5 rounded-lg border-2 border-gray-200 text-gray-700 font-medium quiz-option transition-all duration-300";
-            button.onclick = () => selectAnswer(option.scores);
-            optionsContainerEl.appendChild(button);
-        });
-    }
-
-    function selectAnswer(scores) {
-// Cộng điểm
-        for (const key in scores) {
-            if (userScores.hasOwnProperty(key)) {
-                userScores[key] += scores[key];
-            }
-        }
-
-// Câu tiếp theo hoặc hiển thị kết quả
-        currentQuestionIndex++;
-        if (currentQuestionIndex < quizData.length) {
-            displayQuestion();
-        } else {
-            showResult();
-        }
-    }
-
-    function showResult() {
-        quizQuestionEl.classList.add('hidden');
-        quizResultEl.classList.remove('hidden');
-
-// Tìm hành có điểm cao nhất
-        finalResult = Object.keys(userScores).reduce((a, b) => userScores[a] > userScores[b] ? a : b);
-        const result = quizResults[finalResult];
-
-        resultTitleEl.innerText = result.title;
-        resultTitleEl.className = `font-display text-4xl font-bold mb-4 ${result.color}`;
-        resultIconEl.innerText = result.icon;
-        resultDescriptionEl.innerText = result.description;
-        resultSuggestionEl.innerText = result.suggestion;
-    }
-
-    function shareResult() {
-// Thay vì alert, dùng thông báo tùy chỉnh
-        showAlert(`Chia sẻ kết quả: "Tôi là ${quizResults[finalResult].title}" (Đang phát triển)`);
-// navigator.clipboard.writeText(...) không hoạt động tốt trong iframe/sandbox
-    }
-
-    // === Logic Wish Wall ===
-    const wishInput = document.getElementById('wish-input');
-    const wishContainer = document.getElementById('wish-wall-container');
-
-    function sendWish() {
-        const wishText = wishInput.value.trim();
-        if (wishText === "") {
-            showAlert("Bạn chưa viết điều ước!");
-            return;
-        }
-
-        const lantern = document.createElement('div');
-        lantern.className = 'wish-lantern';
-        lantern.innerText = wishText;
-
-// Vị trí xuất hiện ngẫu nhiên
-        const randomLeft = Math.random() * (wishContainer.offsetWidth - 150); // 150 là chiều rộng ước tính
-        lantern.style.left = `${Math.max(20, randomLeft)}px`; // Đảm bảo không bị tràn
-        lantern.style.bottom = '10px'; // Bắt đầu từ dưới
-
-        wishContainer.appendChild(lantern);
-
-// Xóa khỏi DOM sau khi animation kết thúc (6 giây)
-        setTimeout(() => {
-            lantern.remove();
-        }, 6000);
-
-        wishInput.value = '';
-    }
-
-    // === Khởi chạy ===
-    // Hiển thị trang chủ khi tải lần đầu
-    showPage('home');
-
-</script>
+<script src="main.js"></script>
 </body>
 </html>
