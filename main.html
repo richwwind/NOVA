@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +22,14 @@
                         display: ['Quicksand', 'sans-serif'],
                     },
                     colors: {
-// Tông màu Pastel chủ đạo
+                        // Tông màu Pastel chủ đạo
                         'theme-light': '#FEFBF6', // Nền trắng ngà
                         'theme-primary': '#10B981', // Xanh ngọc (Mộc)
                         'theme-secondary': '#3B82F6', // Xanh dương (Thủy)
                         'theme-accent': '#F59E0B', // Vàng (Kim)
                         'theme-fire': '#EF4444', // Đỏ (Hỏa)
                         'theme-earth': '#D97706', // Cam đất (Thổ)
-// Màu pastel bổ trợ
+                        // Màu pastel bổ trợ
                         'pastel-green': '#ECFDF5',
                         'pastel-blue': '#EFF6FF',
                         'pastel-yellow': '#FFFBEB',
@@ -41,14 +42,32 @@
                     },
                     keyframes: {
                         floatUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '20%': { opacity: '1', transform: 'translateY(0)' },
-                            '80%': { opacity: '1', transform: 'translateY(-150px)' },
-                            '100%': { opacity: '0', transform: 'translateY(-200px)' },
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '20%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                            '80%': {
+                                opacity: '1',
+                                transform: 'translateY(-150px)'
+                            },
+                            '100%': {
+                                opacity: '0',
+                                transform: 'translateY(-200px)'
+                            },
                         },
                         reveal: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(30px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
                         }
                     }
                 }
@@ -56,6 +75,7 @@
         }
     </script>
 </head>
+
 <body class="bg-theme-light font-sans text-gray-800 antialiased">
 
 <!-- Thanh Điều Hướng (Header) -->
@@ -72,186 +92,185 @@
             <a class="nav-cta px-4 py-2 rounded-full" href="#contact">Liên hệ</a>
         </div>
 
-        <button id="mobile-toggle" class="md:hidden px-2 py-1" aria-label="Mở menu">☰</button>
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-white/90 border-t">
-        <div class="flex flex-col p-4">
-            <a class="py-2" href="#home">Trang chủ</a>
-            <a class="py-2" href="#about">Giới thiệu</a>
-            <a class="py-2" href="#explore">Khám phá</a>
-            <a class="py-2" href="#tours">Dịch vụ</a>
-            <a class="py-2" href="#quiz">Quiz</a>
-            <a class="py-2" href="#wishwall">Lời nguyện</a>
-            <a class="py-2 font-semibold" href="#contact">Liên hệ</a>
+            <button id="mobile-toggle" class="md:hidden px-2 py-1" aria-label="Mở menu">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 border-t">
+            <div class="flex flex-col p-4">
+                <a class="py-2" href="#home">Trang chủ</a>
+                <a class="py-2" href="#about">Giới thiệu</a>
+                <a class="py-2" href="#explore">Khám phá</a>
+                <a class="py-2" href="#tours">Dịch vụ</a>
+                <a class="py-2" href="#quiz">Quiz</a>
+                <a class="py-2" href="#wishwall">Lời nguyện</a>
+                <a class="py-2 font-semibold" href="#contact">Liên hệ</a>
+            </div>
         </div>
-    </div>
-</header>
-<!-- Nội dung chính (Chứa các trang) -->
-<main>
+    </header>
+    <!-- Nội dung chính (Chứa các trang) -->
+    <main>
 
-    <!-- 🏠 Trang chủ (Home) -->
-    <section id="home">
-        <!-- Hero Section -->
-        <div class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
-            <!-- Ảnh nền -->
-            <img src="img/ngu-hanh-son-thumb.jpg"
-                 alt="Toàn cảnh Ngũ Hành Sơn"
-                 class="absolute inset-0 w-full h-full object-cover z-0"
-            />
-            <div class="absolute inset-0 bg-black opacity-30 z-10"></div>
+        <!-- 🏠 Trang chủ (Home) -->
+        <section id="home">
+            <!-- Hero Section -->
+            <div class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
+                <!-- Ảnh nền -->
+                <img src="img/ngu-hanh-son-thumb.jpg" alt="Toàn cảnh Ngũ Hành Sơn" class="absolute inset-0 w-full h-full object-cover z-0" />
+                <div class="absolute inset-0 bg-black opacity-30 z-10"></div>
 
-            <!-- Nội dung Slogan -->
-            <div class="relative z-20 p-6 max-w-3xl animate-reveal">
-                <h1 class="font-display font-bold text-4xl md:text-6xl lg:text-7xl !leading-tight text-shadow-lg">
-                    Khám phá – Trải nghiệm – Mua sắm
-                </h1>
-                <p class="font-sans text-xl md:text-2xl mt-6 mb-10 text-shadow-md">
-                    Một hành trình trọn vẹn tại Ngũ Hành Sơn
-                </p>
-                <a href="#featured-mountains" class="bg-white text-theme-primary font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <!-- Nội dung Slogan -->
+                <div class="relative z-20 p-6 max-w-3xl animate-reveal">
+                    <h1 class="font-display font-bold text-4xl md:text-6xl lg:text-7xl !leading-tight text-shadow-lg">
+                        Khám phá – Trải nghiệm – Mua sắm
+                    </h1>
+                    <p class="font-sans text-xl md:text-2xl mt-6 mb-10 text-shadow-md">
+                        Một hành trình trọn vẹn tại Ngũ Hành Sơn
+                    </p>
+                    <a href="#featured-mountains" class="bg-white text-theme-primary font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                     Bắt đầu hành trình
                 </a>
+                </div>
+                <!-- Icon cuộn xuống -->
+                <div class="absolute bottom-10 z-20 animate-bounce">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
             </div>
-            <!-- Icon cuộn xuống -->
-            <div class="absolute bottom-10 z-20 animate-bounce">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
-        </div>
 
-        <!-- Tính năng nổi bật (Khi cuộn xuống) -->
-        <section id="featured-mountains" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="font-display text-4xl font-bold text-center text-gray-800 mb-16">
-                    Khám phá Ngũ Hành
-                </h2>
-                <!--
+            <!-- Tính năng nổi bật (Khi cuộn xuống) -->
+            <section id="featured-mountains" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="font-display text-4xl font-bold text-center text-gray-800 mb-16">
+                        Khám phá Ngũ Hành
+                    </h2>
+                    <!--
                 SỬA ĐỔI: Chuyển từ "grid" sang "flex flex-wrap justify-center"
                 Điều này đảm bảo các hàng (đặc biệt là hàng cuối cùng)
                 sẽ luôn được căn giữa trên mọi kích thước màn hình.
                 -->
-                <div class="flex flex-wrap items-stretch justify-center gap-10">
+                    <div class="flex flex-wrap items-stretch justify-center gap-10">
 
-                    <!--
+                        <!--
                     SỬA ĐỔI: Thêm các class "w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%]"
                     để kiểm soát chiều rộng của thẻ trên các màn hình.
                     - w-full max-w-sm: 100% chiều rộng trên mobile, nhưng không quá lớn.
                     - md:w-[48%]: 2 cột trên tablet.
                     - lg:w-[31%]: 3 cột trên desktop.
                     -->
-                    <!-- Thủy Sơn -->
-                    <div class="reveal-on-scroll bg-pastel-blue rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col">
-                        <img src="img\chua-linh-ung.jpg" class="w-full h-56 object-cover" alt="Thủy Sơn">
-                        <div class="p-8 flex flex-col flex-1"> <!-- Thêm flex-1 để nội dung đẩy nút xuống dưới -->
-                            <h3 class="font-display text-3xl font-bold text-theme-secondary mb-3">🌊 Thủy Sơn</h3>
-                            <p class="text-gray-600 mb-6 flex-1">Linh thiêng với chùa Linh Ứng và động Huyền Không. Nơi lý tưởng cho tour tâm linh và tìm về bình yên.</p>
-                            <div class="flex flex-col sm:flex-row gap-3 mt-auto"> <!-- Thêm mt-auto để đẩy nút xuống -->
-                                <button onclick="showPage('tours')" class="flex-1 bg-theme-secondary text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300">Đặt tour Tâm linh</button>
-                                <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-secondary font-semibold py-3 px-6 rounded-lg border border-theme-secondary hover:bg-blue-50 transition-all duration-300">Khám phá</button>
+                        <!-- Thủy Sơn -->
+                        <div class="reveal-on-scroll bg-pastel-blue rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col">
+                            <img src="img\chua-linh-ung.jpg" class="w-full h-56 object-cover" alt="Thủy Sơn">
+                            <div class="p-8 flex flex-col flex-1">
+                                <!-- Thêm flex-1 để nội dung đẩy nút xuống dưới -->
+                                <h3 class="font-display text-3xl font-bold text-theme-secondary mb-3">🌊 Thủy Sơn</h3>
+                                <p class="text-gray-600 mb-6 flex-1">Linh thiêng với chùa Linh Ứng và động Huyền Không. Nơi lý tưởng cho tour tâm linh và tìm về bình yên.</p>
+                                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                                    <!-- Thêm mt-auto để đẩy nút xuống -->
+                                    <button onclick="showPage('tours')" class="flex-1 bg-theme-secondary text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300">Đặt tour Tâm linh</button>
+                                    <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-secondary font-semibold py-3 px-6 rounded-lg border border-theme-secondary hover:bg-blue-50 transition-all duration-300">Khám phá</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Mộc Sơn -->
-                    <div class="reveal-on-scroll bg-pastel-green rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 100ms;">
-                        <img src="img\lang-da-mi-nghe.jpg" class="w-full h-56 object-cover" alt="Mộc Sơn">
-                        <div class="p-8 flex flex-col flex-1">
-                            <h3 class="font-display text-3xl font-bold text-theme-primary mb-3">🌿 Mộc Sơn</h3>
-                            <p class="text-gray-600 mb-6 flex-1">Gắn liền với làng đá mỹ nghệ Non Nước. Nơi khai sinh những tác phẩm điêu khắc tinh xảo từ đá cẩm thạch.</p>
-                            <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <button onclick="showPage('explore')" class="flex-1 bg-theme-primary text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">Xem sản phẩm thủ công</button>
-                                <button onclick="showPage('tours')" class="flex-1 bg-white text-theme-primary font-semibold py-3 px-6 rounded-lg border border-theme-primary hover:bg-green-50 transition-all duration-300">Tour Làng nghề</button>
+                        <!-- Mộc Sơn -->
+                        <div class="reveal-on-scroll bg-pastel-green rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 100ms;">
+                            <img src="img\lang-da-mi-nghe.jpg" class="w-full h-56 object-cover" alt="Mộc Sơn">
+                            <div class="p-8 flex flex-col flex-1">
+                                <h3 class="font-display text-3xl font-bold text-theme-primary mb-3">🌿 Mộc Sơn</h3>
+                                <p class="text-gray-600 mb-6 flex-1">Gắn liền với làng đá mỹ nghệ Non Nước. Nơi khai sinh những tác phẩm điêu khắc tinh xảo từ đá cẩm thạch.</p>
+                                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                                    <button onclick="showPage('explore')" class="flex-1 bg-theme-primary text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">Xem sản phẩm thủ công</button>
+                                    <button onclick="showPage('tours')" class="flex-1 bg-white text-theme-primary font-semibold py-3 px-6 rounded-lg border border-theme-primary hover:bg-green-50 transition-all duration-300">Tour Làng nghề</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Hỏa Sơn -->
-                    <div class="reveal-on-scroll bg-pastel-red rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 200ms;">
-                        <img src="img\canh-hoang-hon.jpg" class="w-full h-56 object-cover" alt="Hỏa Sơn">
-                        <div class="p-8 flex flex-col flex-1">
-                            <h3 class="font-display text-3xl font-bold text-theme-fire mb-3">🔥 Hỏa Sơn</h3>
-                            <p class="text-gray-600 mb-6 flex-1">Nổi bật với vẻ đẹp hùng vĩ và những góc "sống ảo" tuyệt đẹp lúc bình minh hoặc hoàng hôn.</p>
-                            <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <button onclick="showPage('tours')" class="flex-1 bg-theme-fire text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-red-600 transition-all duration-300">Đặt tour Chụp ảnh</button>
-                                <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-fire font-semibold py-3 px-6 rounded-lg border border-theme-fire hover:bg-red-50 transition-all duration-300">Khám phá</button>
+                        <!-- Hỏa Sơn -->
+                        <div class="reveal-on-scroll bg-pastel-red rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 200ms;">
+                            <img src="img\canh-hoang-hon.jpg" class="w-full h-56 object-cover" alt="Hỏa Sơn">
+                            <div class="p-8 flex flex-col flex-1">
+                                <h3 class="font-display text-3xl font-bold text-theme-fire mb-3">🔥 Hỏa Sơn</h3>
+                                <p class="text-gray-600 mb-6 flex-1">Nổi bật với vẻ đẹp hùng vĩ và những góc "sống ảo" tuyệt đẹp lúc bình minh hoặc hoàng hôn.</p>
+                                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                                    <button onclick="showPage('tours')" class="flex-1 bg-theme-fire text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-red-600 transition-all duration-300">Đặt tour Chụp ảnh</button>
+                                    <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-fire font-semibold py-3 px-6 rounded-lg border border-theme-fire hover:bg-red-50 transition-all duration-300">Khám phá</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Kim Sơn -->
-                    <div class="reveal-on-scroll bg-pastel-yellow rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 300ms;">
-                        <img src="https://placehold.co/600x400/FFFBEB/B45309?text=Kim+Son+(Yen+Tinh)" class="w-full h-56 object-cover" alt="Kim Sơn">
-                        <div class="p-8 flex flex-col flex-1">
-                            <h3 class="font-display text-3xl font-bold text-theme-accent mb-3">✨ Kim Sơn</h3>
-                            <p class="text-gray-600 mb-6 flex-1">Yên tĩnh với chùa Quan Âm, động Quan Âm. Không gian lý tưởng cho tour thiền & yoga tìm về tĩnh tại.</p>
-                            <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <button onclick="showPage('tours')" class="flex-1 bg-theme-accent text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-amber-600 transition-all duration-300">Đặt tour Thiền</button>
-                                <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-accent font-semibold py-3 px-6 rounded-lg border border-theme-accent hover:bg-yellow-50 transition-all duration-300">Khám phá</button>
+                        <!-- Kim Sơn -->
+                        <div class="reveal-on-scroll bg-pastel-yellow rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 300ms;">
+                            <img src="img\chua-quan-am.jpg" class="w-full h-56 object-cover" alt="Kim Sơn">
+                            <div class="p-8 flex flex-col flex-1">
+                                <h3 class="font-display text-3xl font-bold text-theme-accent mb-3">✨ Kim Sơn</h3>
+                                <p class="text-gray-600 mb-6 flex-1">Yên tĩnh với chùa Quan Âm, động Quan Âm. Không gian lý tưởng cho tour thiền & yoga tìm về tĩnh tại.</p>
+                                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                                    <button onclick="showPage('tours')" class="flex-1 bg-theme-accent text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-amber-600 transition-all duration-300">Đặt tour Thiền</button>
+                                    <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-accent font-semibold py-3 px-6 rounded-lg border border-theme-accent hover:bg-yellow-50 transition-all duration-300">Khám phá</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Thổ Sơn -->
-                    <div class="reveal-on-scroll bg-pastel-orange rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 400ms;">
-                        <img src="https://placehold.co/600x400/FFF7ED/C2410C?text=Tho+Son+(Hang+Dong)" class="w-full h-56 object-cover" alt="Thổ Sơn">
-                        <div class="p-8 flex flex-col flex-1">
-                            <h3 class="font-display text-3xl font-bold text-theme-earth mb-3">🌾 Thổ Sơn</h3>
-                            <p class="text-gray-600 mb-6 flex-1">Nhiều hang động, vách đá rêu phong. Lý tưởng cho những ai thích khám phá, mạo hiểm nhẹ.</p>
-                            <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <button onclick="showPage('tours')" class="flex-1 bg-theme-earth text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-amber-700 transition-all duration-300">Đặt tour Mạo hiểm</button>
-                                <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-earth font-semibold py-3 px-6 rounded-lg border border-theme-earth hover:bg-orange-50 transition-all duration-300">Khám phá</button>
+                        <!-- Thổ Sơn -->
+                        <div class="reveal-on-scroll bg-pastel-orange rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2 w-full max-w-sm md:max-w-none md:w-[48%] lg:w-[31%] flex flex-col" style="transition-delay: 400ms;">
+                            <img src="img\hang-dong.jpg" class="w-full h-56 object-cover" alt="Thổ Sơn">
+                            <div class="p-8 flex flex-col flex-1">
+                                <h3 class="font-display text-3xl font-bold text-theme-earth mb-3">🌾 Thổ Sơn</h3>
+                                <p class="text-gray-600 mb-6 flex-1">Nhiều hang động, vách đá rêu phong. Lý tưởng cho những ai thích khám phá, mạo hiểm nhẹ.</p>
+                                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                                    <button onclick="showPage('tours')" class="flex-1 bg-theme-earth text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-amber-700 transition-all duration-300">Đặt tour Mạo hiểm</button>
+                                    <button onclick="showPage('explore')" class="flex-1 bg-white text-theme-earth font-semibold py-3 px-6 rounded-lg border border-theme-earth hover:bg-orange-50 transition-all duration-300">Khám phá</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- 🌋 Trang Giới thiệu (About) -->
+        <section id="about" class="page pt-28 pb-20 container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">Về Ngũ Hành Sơn</h2>
+                <p class="text-xl text-gray-600 leading-relaxed">Nơi huyền thoại, văn hóa và thiên nhiên giao thoa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Video/Ảnh truyền thuyết -->
+                <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="img/truyen-thuyet.jpg" alt="Truyền thuyết Vỏ Trứng Rồng" class="w-full h-full object-cover">
+                    <!-- Có thể thay bằng <video> nếu có video -->
+                </div>
+
+                <!-- Nội dung giới thiệu -->
+                <div class="text-gray-700 leading-loose">
+                    <h3 class="font-display text-3xl font-bold text-theme-primary mb-4">Truyền thuyết Vỏ Trứng Rồng</h3>
+                    <p class="mb-4">
+                        Tương truyền, xưa kia có một con rồng thần bay đến đây đẻ trứng. Từ năm mảnh vỡ của quả trứng ấy đã hóa thành 5 ngọn núi, tượng trưng cho 5 yếu tố của vũ trụ: Kim, Mộc, Thủy, Hỏa, Thổ.
+                    </p>
+                    <p class="mb-6">
+                        Ngày nay, Ngũ Hành Sơn (hay núi Non Nước) không chỉ là một danh thắng kỳ vĩ với hệ thống hang động, chùa chiền cổ kính mà còn là cái nôi của làng nghề điêu khắc đá Non Nước trứ danh.
+                    </p>
+                    <div class="bg-pastel-green p-6 rounded-lg border-l-4 border-theme-primary">
+                        <p class="font-medium text-lg text-emerald-800">
+                            "Ngũ Hành Sơn không chỉ là điểm tham quan, mà còn là nơi kết nối văn hóa và kinh doanh địa phương. Đây là câu chuyện quê hương được kể bởi chính thế hệ trẻ chúng mình!"
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
-    </section>
 
-    <!-- 🌋 Trang Giới thiệu (About) -->
-    <section id="about" class="page pt-28 pb-20 container mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">Về Ngũ Hành Sơn</h2>
-            <p class="text-xl text-gray-600 leading-relaxed">Nơi huyền thoại, văn hóa và thiên nhiên giao thoa.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <!-- Video/Ảnh truyền thuyết -->
-            <div class="rounded-xl overflow-hidden shadow-2xl">
-                <img src="https://placehold.co/600x500/FEF2F2/7F1D1D?text=Truyen+Thuyet+Vo+Trung+Rong" alt="Truyền thuyết Vỏ Trứng Rồng" class="w-full h-full object-cover">
-                <!-- Có thể thay bằng <video> nếu có video -->
-            </div>
-
-            <!-- Nội dung giới thiệu -->
-            <div class="text-gray-700 leading-loose">
-                <h3 class="font-display text-3xl font-bold text-theme-primary mb-4">Truyền thuyết Vỏ Trứng Rồng</h3>
-                <p class="mb-4">
-                    Tương truyền, xưa kia có một con rồng thần bay đến đây đẻ trứng. Từ năm mảnh vỡ của quả trứng ấy đã hóa thành 5 ngọn núi, tượng trưng cho 5 yếu tố của vũ trụ: Kim, Mộc, Thủy, Hỏa, Thổ.
-                </p>
-                <p class="mb-6">
-                    Ngày nay, Ngũ Hành Sơn (hay núi Non Nước) không chỉ là một danh thắng kỳ vĩ với hệ thống hang động, chùa chiền cổ kính mà còn là cái nôi của làng nghề điêu khắc đá Non Nước trứ danh.
-                </p>
-                <div class="bg-pastel-green p-6 rounded-lg border-l-4 border-theme-primary">
-                    <p class="font-medium text-lg text-emerald-800">
-                        "Ngũ Hành Sơn không chỉ là điểm tham quan, mà còn là nơi kết nối văn hóa và kinh doanh địa phương. Đây là câu chuyện quê hương được kể bởi chính thế hệ trẻ chúng mình!"
-                    </p>
+        <!-- 🪷 Trang Khám phá (Explore) -->
+        <section id="explore" class="pt-28 pb-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🪷 Khám phá 5 Hành</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">Mỗi ngọn núi mang một vẻ đẹp, một câu chuyện và một trải nghiệm riêng.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🪷 Trang Khám phá (Explore) -->
-    <section id="explore" class="pt-28 pb-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🪷 Khám phá 5 Hành</h2>
-                <p class="text-xl text-gray-600 leading-relaxed">Mỗi ngọn núi mang một vẻ đẹp, một câu chuyện và một trải nghiệm riêng.</p>
-            </div>
 
             <div class="space-y-12">
                 <!-- Thủy Sơn -->
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-blue p-8 rounded-2xl shadow-lg">
-                    <img src="img/thuyson.jpg" alt="Thủy Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
+                    <img src="https://placehold.co/400x400/BFDBFE/1E3A8A?text=Thuy+Son" alt="Thủy Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
                     <div class="md:col-span-3">
                         <h3 class="font-display text-3xl font-bold text-theme-secondary mb-3">🌊 Thủy Sơn (Hành Thủy)</h3>
                         <p class="text-gray-600 mb-4">Ngọn núi lớn và đẹp nhất, hội tụ chùa Linh Ứng, chùa Tam Thai, động Huyền Không, động Âm Phủ... Nơi đây toát lên vẻ đẹp linh thiêng, huyền bí.</p>
@@ -264,7 +283,7 @@
 
                 <!-- Mộc Sơn -->
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-green p-8 rounded-2xl shadow-lg">
-                    <img src="img/mocson.jpeg" alt="Mộc Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
+                    <img src="https://placehold.co/400x400/D1FAE5/064E3B?text=Moc+Son" alt="Mộc Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
                     <div class="md:col-span-3">
                         <h3 class="font-display text-3xl font-bold text-theme-primary mb-3">🌿 Mộc Sơn (Hành Mộc)</h3>
                         <p class="text-gray-600 mb-4">Gắn liền với làng đá mỹ nghệ Non Nước. Dù không có nhiều chùa chiền, Mộc Sơn là nơi bạn cảm nhận rõ nhất "hồn đá" qua các tác phẩm điêu khắc tinh xảo.</p>
@@ -277,7 +296,7 @@
 
                 <!-- Hỏa Sơn -->
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-red p-8 rounded-2xl shadow-lg">
-                    <img src="img/hoason.jpg" alt="Hỏa Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
+                    <img src="https://placehold.co/400x400/FEE2E2/991B1B?text=Hoa+Son" alt="Hỏa Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
                     <div class="md:col-span-3">
                         <h3 class="font-display text-3xl font-bold text-theme-fire mb-3">🔥 Hỏa Sơn (Hành Hỏa)</h3>
                         <p class="text-gray-600 mb-4">Gồm hai đỉnh Âm Hỏa Sơn và Dương Hỏa Sơn. Nơi đây có nhiều vách đá hùng vĩ, là điểm lý tưởng để săn ảnh bình minh và hoàng hôn.</p>
@@ -290,7 +309,7 @@
 
                 <!-- Kim Sơn -->
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-yellow p-8 rounded-2xl shadow-lg">
-                    <img src="img/kimson.jpg" alt="Kim Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
+                    <img src="https://placehold.co/400x400/FFFBEB/B45309?text=Kim+Son" alt="Kim Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
                     <div class="md:col-span-3">
                         <h3 class="font-display text-3xl font-bold text-theme-accent mb-3">✨ Kim Sơn (Hành Kim)</h3>
                         <p class="text-gray-600 mb-4">Yên tĩnh và trầm mặc, nổi bật với chùa Quan Âm và động Quan Âm. Không gian thanh tịnh, phù hợp cho những ai tìm kiếm sự tĩnh tâm.</p>
@@ -303,7 +322,7 @@
 
                 <!-- Thổ Sơn -->
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-pastel-orange p-8 rounded-2xl shadow-lg">
-                    <img src="img/thổ sơn.jpg" alt="Thổ Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
+                    <img src="https://placehold.co/400x400/FFF7ED/C2410C?text=Tho+Son" alt="Thổ Sơn" class="w-full h-64 md:h-full object-cover rounded-xl md:col-span-2">
                     <div class="md:col-span-3">
                         <h3 class="font-display text-3xl font-bold text-theme-earth mb-3">🌾 Thổ Sơn (Hành Thổ)</h3>
                         <p class="text-gray-600 mb-4">Là ngọn núi "đất" với nhiều hang động nhỏ và vách đá rêu phong. Nơi đây ẩn chứa nhiều câu chuyện và phù hợp cho những ai thích khám phá, mạo hiểm nhẹ.</p>
@@ -314,238 +333,239 @@
                     </div>
                 </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 🧳 Trang Dịch vụ & Tour (Tour & Service) -->
-    <section id="tours" class="pt-28 pb-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🧳 Gói Dịch vụ & Tour</h2>
-                <p class="text-xl text-gray-600 leading-relaxed">Những hành trình được thiết kế riêng bởi thế hệ trẻ, dành cho bạn!</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Tour 1: Nửa ngày -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/E0E7FF/3730A3?text=Tour+Lua+Ngu+Hanh+(Nua+Ngay)" class="w-full h-56 object-cover" alt="Tour Nửa Ngày">
-                    <div class="p-8 flex flex-col flex-1">
-                        <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Lướt Ngũ Hành"</h3>
-                        <p class="text-gray-600 mb-6 flex-1">Tham quan nhanh 2-3 điểm nổi bật nhất tại Thủy Sơn và làng đá Non Nước. Dành cho du khách bận rộn.</p>
-                        <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
-                            <span class="font-medium">⏱️ Thời lượng: 3-4 tiếng</span>
-                            <span class="font-bold text-theme-primary text-lg">Từ 3xx.xxx VNĐ</span>
-                        </div>
-                        <button onclick="openTourModal('Tour Lướt Ngũ Hành')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
-                            Đặt tour ngay
-                        </button>
-                    </div>
+        <!-- 🧳 Trang Dịch vụ & Tour (Tour & Service) -->
+        <section id="tours" class="pt-28 pb-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">🧳 Gói Dịch vụ & Tour</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">Những hành trình được thiết kế riêng bởi thế hệ trẻ, dành cho bạn!</p>
                 </div>
 
-                <!-- Tour 2: Tâm linh -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/FBCFE8/831843?text=Tour+Tim+Ve+An+Yen+(Tam+Linh)" class="w-full h-56 object-cover" alt="Tour Tâm Linh">
-                    <div class="p-8 flex flex-col flex-1">
-                        <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Tìm về An yên"</h3>
-                        <p class="text-gray-600 mb-6 flex-1">Hành trình sâu vào các chùa chiền, hang động (Huyền Không, Âm Phủ), nghe kể truyền thuyết và lịch sử.</p>
-                        <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
-                            <span class="font-medium">⏱️ Thời lượng: 4-5 tiếng</span>
-                            <span class="font-bold text-theme-primary text-lg">Từ 4xx.xxx VNĐ</span>
-                        </div>
-                        <button onclick="openTourModal('Tour Tìm về An yên')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Tour 1: Nửa ngày -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/E0E7FF/3730A3?text=Tour+Lua+Ngu+Hanh+(Nua+Ngay)" class="w-full h-56 object-cover" alt="Tour Nửa Ngày">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Lướt Ngũ Hành"</h3>
+                            <p class="text-gray-600 mb-6 flex-1">Tham quan nhanh 2-3 điểm nổi bật nhất tại Thủy Sơn và làng đá Non Nước. Dành cho du khách bận rộn.</p>
+                            <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
+                                <span class="font-medium">⏱️ Thời lượng: 3-4 tiếng</span>
+                                <span class="font-bold text-theme-primary text-lg">Từ 3xx.xxx VNĐ</span>
+                            </div>
+                            <button onclick="openTourModal('Tour Lướt Ngũ Hành')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
                             Đặt tour ngay
                         </button>
-                    </div>
-                </div>
-
-                <!-- Tour 3: Làng nghề -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/DDEEED/0D9488?text=Tour+Cham+Vao+Hon+Da+(Lang+Nghe)" class="w-full h-56 object-cover" alt="Tour Làng nghề">
-                    <div class="p-8 flex flex-col flex-1">
-                        <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Chạm vào Hồn Đá"</h3>
-                        <p class="text-gray-600 mb-6 flex-1">Kết hợp tham quan Mộc Sơn và trải nghiệm thực tế tại làng đá mỹ nghệ Non Nước. Tự tay làm một món quà nhỏ.</p>
-                        <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
-                            <span class="font-medium">⏱️ Thời lượng: 4 tiếng</span>
-                            <span class="font-bold text-theme-primary text-lg">Từ 5xx.xxx VNĐ</span>
                         </div>
-                        <button onclick="openTourModal('Tour Chạm vào Hồn Đá')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
+                    </div>
+
+                    <!-- Tour 2: Tâm linh -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/FBCFE8/831843?text=Tour+Tim+Ve+An+Yen+(Tam+Linh)" class="w-full h-56 object-cover" alt="Tour Tâm Linh">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Tìm về An yên"</h3>
+                            <p class="text-gray-600 mb-6 flex-1">Hành trình sâu vào các chùa chiền, hang động (Huyền Không, Âm Phủ), nghe kể truyền thuyết và lịch sử.</p>
+                            <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
+                                <span class="font-medium">⏱️ Thời lượng: 4-5 tiếng</span>
+                                <span class="font-bold text-theme-primary text-lg">Từ 4xx.xxx VNĐ</span>
+                            </div>
+                            <button onclick="openTourModal('Tour Tìm về An yên')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
                             Đặt tour ngay
                         </button>
+                        </div>
                     </div>
-                </div>
 
+                    <!-- Tour 3: Làng nghề -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/DDEEED/0D9488?text=Tour+Cham+Vao+Hon+Da+(Lang+Nghe)" class="w-full h-56 object-cover" alt="Tour Làng nghề">
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-3">Tour "Chạm vào Hồn Đá"</h3>
+                            <p class="text-gray-600 mb-6 flex-1">Kết hợp tham quan Mộc Sơn và trải nghiệm thực tế tại làng đá mỹ nghệ Non Nước. Tự tay làm một món quà nhỏ.</p>
+                            <div class="flex justify-between items-center text-sm text-gray-500 mb-6">
+                                <span class="font-medium">⏱️ Thời lượng: 4 tiếng</span>
+                                <span class="font-bold text-theme-primary text-lg">Từ 5xx.xxx VNĐ</span>
+                            </div>
+                            <button onclick="openTourModal('Tour Chạm vào Hồn Đá')" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">
+                            Đặt tour ngay
+                        </button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 🎮 Trang Quiz / Mini game -->
-    <section id="quiz" class="pt-28 pb-20 bg-white">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <div id="quiz-container" class="bg-theme-light p-8 md:p-12 rounded-2xl shadow-xl text-center">
+        <!-- 🎮 Trang Quiz / Mini game -->
+        <section id="quiz" class="pt-28 pb-20 bg-white">
+            <div class="container mx-auto px-6 max-w-2xl">
+                <div id="quiz-container" class="bg-theme-light p-8 md:p-12 rounded-2xl shadow-xl text-center">
 
-                <!-- Bắt đầu Quiz -->
-                <div id="quiz-start">
-                    <h2 class="font-display text-4xl font-bold text-gray-800 mb-4">🎮 Quiz Vui</h2>
-                    <p class="text-xl text-gray-600 mb-10">Bạn mang năng lượng "Hành" nào trong Ngũ Hành Sơn?</p>
-                    <button onclick="startQuiz()" class="bg-theme-primary text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105">
+                    <!-- Bắt đầu Quiz -->
+                    <div id="quiz-start">
+                        <h2 class="font-display text-4xl font-bold text-gray-800 mb-4">🎮 Quiz Vui</h2>
+                        <p class="text-xl text-gray-600 mb-10">Bạn mang năng lượng "Hành" nào trong Ngũ Hành Sơn?</p>
+                        <button onclick="startQuiz()" class="bg-theme-primary text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105">
                         Bắt đầu ngay!
                     </button>
-                </div>
-
-                <!-- Câu hỏi Quiz -->
-                <div id="quiz-question-area" class="hidden">
-                    <p id="question-progress" class="font-semibold text-theme-primary mb-4">Câu 1/5</p>
-                    <h3 id="question-text" class="font-display text-3xl font-bold text-gray-800 mb-10"></h3>
-                    <div id="options-container" class="space-y-4">
-                        <!-- Các lựa chọn sẽ được JS chèn vào đây -->
                     </div>
-                </div>
 
-                <!-- Kết quả Quiz -->
-                <div id="quiz-result-area" class="hidden">
-                    <h2 class="font-display text-3xl font-bold text-gray-800 mb-6">Kết quả của bạn...</h2>
-                    <div id="result-icon" class="text-8xl mb-6"></div>
-                    <h3 id="result-title" class="font-display text-4xl font-bold mb-4"></h3>
-                    <p id="result-description" class="text-lg text-gray-700 leading-relaxed mb-8"></p>
-                    <p id="result-suggestion" class="text-md font-semibold text-gray-600 bg-gray-200 p-4 rounded-lg mb-8"></p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button onclick="startQuiz()" class="bg-gray-300 text-gray-700 font-bold py-3 px-8 rounded-full hover:bg-gray-400 transition-all duration-300">
+                    <!-- Câu hỏi Quiz -->
+                    <div id="quiz-question-area" class="hidden">
+                        <p id="question-progress" class="font-semibold text-theme-primary mb-4">Câu 1/5</p>
+                        <h3 id="question-text" class="font-display text-3xl font-bold text-gray-800 mb-10"></h3>
+                        <div id="options-container" class="space-y-4">
+                            <!-- Các lựa chọn sẽ được JS chèn vào đây -->
+                        </div>
+                    </div>
+
+                    <!-- Kết quả Quiz -->
+                    <div id="quiz-result-area" class="hidden">
+                        <h2 class="font-display text-3xl font-bold text-gray-800 mb-6">Kết quả của bạn...</h2>
+                        <div id="result-icon" class="text-8xl mb-6"></div>
+                        <h3 id="result-title" class="font-display text-4xl font-bold mb-4"></h3>
+                        <p id="result-description" class="text-lg text-gray-700 leading-relaxed mb-8"></p>
+                        <p id="result-suggestion" class="text-md font-semibold text-gray-600 bg-gray-200 p-4 rounded-lg mb-8"></p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button onclick="startQuiz()" class="bg-gray-300 text-gray-700 font-bold py-3 px-8 rounded-full hover:bg-gray-400 transition-all duration-300">
                             Chơi lại
                         </button>
-                        <button onclick="shareResult()" class="bg-theme-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300">
+                            <button onclick="shareResult()" class="bg-theme-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300">
                             Chia sẻ kết quả
                         </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 💭 Trang Lời nguyện / Wish Wall -->
-    <section id="wishwall" class="page pt-28 pb-20">
-        <div class="container mx-auto px-6 max-w-3xl text-center">
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">💭 Gửi Lời Nguyện</h2>
-            <p class="text-xl text-gray-600 leading-relaxed mb-10">Gửi gắm điều ước của bạn tại vùng đất linh thiêng. Điều ước sẽ bay lên như những chiếc đèn lồng...</p>
+        <!-- 💭 Trang Lời nguyện / Wish Wall -->
+        <section id="wishwall" class="page pt-28 pb-20">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">💭 Gửi Lời Nguyện</h2>
+                <p class="text-xl text-gray-600 leading-relaxed mb-10">Gửi gắm điều ước của bạn tại vùng đất linh thiêng. Điều ước sẽ bay lên như những chiếc đèn lồng...</p>
 
-            <!-- Khu vực hiển thị hiệu ứng -->
-            <div id="wish-wall-container" class="relative w-full h-96 bg-pastel-blue rounded-2xl shadow-inner mb-8 overflow-hidden">
-                <img src="https://placehold.co/800x400/BFDBFE/1E3A8A?text=Nen+Troi+Dem+Mo+Ao" alt="Nền trời đêm" class="absolute inset-0 w-full h-full object-cover opacity-30">
-                <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-500 font-semibold">Nơi các điều ước bay lên...</span>
-            </div>
+                <!-- Khu vực hiển thị hiệu ứng -->
+                <div id="wish-wall-container" class="relative w-full h-96 bg-pastel-blue rounded-2xl shadow-inner mb-8 overflow-hidden">
+                    <img src="https://placehold.co/800x400/BFDBFE/1E3A8A?text=Nen+Troi+Dem+Mo+Ao" alt="Nền trời đêm" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-500 font-semibold">Nơi các điều ước bay lên...</span>
+                </div>
 
-            <!-- Khu vực nhập liệu -->
-            <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input id="wish-input" type="text" placeholder="Viết điều ước của bạn (tối đa 50 ký tự)..." maxlength="50" class="flex-1 px-5 py-3 rounded-full border-2 border-gray-300 focus:border-theme-primary focus:ring-1 focus:ring-theme-primary outline-none transition-all">
-                <button onclick="sendWish()" class="bg-theme-accent text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-amber-600 transition-all duration-300 transform hover:scale-105">
+                <!-- Khu vực nhập liệu -->
+                <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input id="wish-input" type="text" placeholder="Viết điều ước của bạn (tối đa 50 ký tự)..." maxlength="50" class="flex-1 px-5 py-3 rounded-full border-2 border-gray-300 focus:border-theme-primary focus:ring-1 focus:ring-theme-primary outline-none transition-all">
+                    <button onclick="sendWish()" class="bg-theme-accent text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-amber-600 transition-all duration-300 transform hover:scale-105">
                     Gửi Lời Nguyện
                 </button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 📞 Liên hệ (Contact) -->
-    <section id="contact" class="pt-28 pb-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">📞 Liên hệ với Chúng mình</h2>
-                <p class="text-xl text-gray-600 leading-relaxed">Chúng mình là nhóm học sinh [Tên trường/Lớp] với mong muốn lan tỏa vẻ đẹp quê hương.</p>
-            </div>
+        <!-- 📞 Liên hệ (Contact) -->
+        <section id="contact" class="pt-28 pb-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">📞 Liên hệ với Chúng mình</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">Chúng mình là nhóm học sinh [Tên trường/Lớp] với mong muốn lan tỏa vẻ đẹp quê hương.</p>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Form liên hệ -->
-                <form class="bg-theme-light p-8 rounded-2xl shadow-lg">
-                    <h3 class="font-display text-2xl font-bold text-gray-800 mb-6">Gửi tin nhắn</h3>
-                    <div class="space-y-4">
-                        <input type="text" placeholder="Tên của bạn" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary">
-                        <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary">
-                        <textarea placeholder="Lời nhắn của bạn..." rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary"></textarea>
-                        <button type="submit" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">Gửi đi</button>
-                    </div>
-                </form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Form liên hệ -->
+                    <form class="bg-theme-light p-8 rounded-2xl shadow-lg">
+                        <h3 class="font-display text-2xl font-bold text-gray-800 mb-6">Gửi tin nhắn</h3>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Tên của bạn" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary">
+                            <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary">
+                            <textarea placeholder="Lời nhắn của bạn..." rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary"></textarea>
+                            <button type="submit" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300">Gửi đi</button>
+                        </div>
+                    </form>
 
-                <!-- Thông tin & Đối tác -->
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Thông tin nhóm</h3>
-                        <p class="text-gray-600 mb-2"><strong>Email:</strong> duan.nguhanhson@gmail.com</p>
-                        <p class="text-gray-600 mb-2"><strong>Zalo/Hotline:</strong> 090x.xxx.xxx (Bạn [Tên])</p>
-                        <p class="text-gray-600"><strong>Facebook:</strong> fb.com/NguHanhSonProject</p>
-                    </div>
-                    <div>
-                        <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Đối tác của chúng mình</h3>
-                        <p class="text-gray-600 mb-4">Chúng mình tự hào liên kết với các doanh nghiệp địa phương:</p>
-                        <ul class="space-y-2 list-disc list-inside">
-                            <li class="text-gray-700">Công ty Du lịch [Tên công ty A]</li>
-                            <li class="text-gray-700">Xưởng đá mỹ nghệ Non Nước [Nghệ nhân B]</li>
-                            <li class="text-gray-700">Trang đặt tour [Tên trang C]</li>
-                        </ul>
+                    <!-- Thông tin & Đối tác -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Thông tin nhóm</h3>
+                            <p class="text-gray-600 mb-2"><strong>Email:</strong> duan.nguhanhson@gmail.com</p>
+                            <p class="text-gray-600 mb-2"><strong>Zalo/Hotline:</strong> 090x.xxx.xxx (Bạn [Tên])</p>
+                            <p class="text-gray-600"><strong>Facebook:</strong> fb.com/NguHanhSonProject</p>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Đối tác của chúng mình</h3>
+                            <p class="text-gray-600 mb-4">Chúng mình tự hào liên kết với các doanh nghiệp địa phương:</p>
+                            <ul class="space-y-2 list-disc list-inside">
+                                <li class="text-gray-700">Công ty Du lịch [Tên công ty A]</li>
+                                <li class="text-gray-700">Xưởng đá mỹ nghệ Non Nước [Nghệ nhân B]</li>
+                                <li class="text-gray-700">Trang đặt tour [Tên trang C]</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-display text-lg font-semibold mb-2">Dự án "Khám phá & Trải nghiệm Ngũ Hành Sơn"</p>
+            <p>&copy; 2025 - Thực hiện bởi [Tên Nhóm Học Sinh]. Phát triển với tình yêu Đà Nẵng.</p>
         </div>
-    </section>
+    </footer>
 
-</main>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-gray-300 py-12">
-    <div class="container mx-auto px-6 text-center">
-        <p class="font-display text-lg font-semibold mb-2">Dự án "Khám phá & Trải nghiệm Ngũ Hành Sơn"</p>
-        <p>&copy; 2025 - Thực hiện bởi [Tên Nhóm Học Sinh]. Phát triển với tình yêu Đà Nẵng.</p>
-    </div>
-</footer>
-
-<!-- Modal Đặt Tour -->
-<div id="tour-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm hidden" onclick="closeTourModal()">
-    <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg m-6 p-8 relative animate-reveal" onclick="event.stopPropagation()">
-        <!-- Nút đóng -->
-        <button onclick="closeTourModal()" class="absolute top-4 right-5 text-gray-400 hover:text-gray-700 transition-colors">
+    <!-- Modal Đặt Tour -->
+    <div id="tour-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm hidden" onclick="closeTourModal()">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg m-6 p-8 relative animate-reveal" onclick="event.stopPropagation()">
+            <!-- Nút đóng -->
+            <button onclick="closeTourModal()" class="absolute top-4 right-5 text-gray-400 hover:text-gray-700 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
 
-        <h3 id="modal-title" class="font-display text-3xl font-bold text-theme-primary mb-6">Đặt tour</h3>
-        <p class="text-gray-600 mb-6">Vui lòng để lại thông tin, chúng mình sẽ liên hệ bạn (qua Zalo) để xác nhận và tư vấn chi tiết nhé!</p>
+            <h3 id="modal-title" class="font-display text-3xl font-bold text-theme-primary mb-6">Đặt tour</h3>
+            <p class="text-gray-600 mb-6">Vui lòng để lại thông tin, chúng mình sẽ liên hệ bạn (qua Zalo) để xác nhận và tư vấn chi tiết nhé!</p>
 
-        <form id="tour-form">
-            <div class="space-y-4">
-                <input type="text" placeholder="Họ và tên của bạn" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary" required>
-                <input type="tel" placeholder="Số điện thoại (Zalo)" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary" required>
-                <input type="number" placeholder="Số lượng người (dự kiến)" min="1" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary">
-                <input type="hidden" id="tour-name-input" name="tourName">
-            </div>
-            <button type="submit" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300 mt-8">
+            <form id="tour-form">
+                <div class="space-y-4">
+                    <input type="text" placeholder="Họ và tên của bạn" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary" required>
+                    <input type="tel" placeholder="Số điện thoại (Zalo)" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary" required>
+                    <input type="number" placeholder="Số lượng người (dự kiến)" min="1" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-theme-primary">
+                    <input type="hidden" id="tour-name-input" name="tourName">
+                </div>
+                <button type="submit" class="w-full bg-theme-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-emerald-600 transition-all duration-300 mt-8">
                 Gửi đăng ký
             </button>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- Modal Thông Báo (Chung) -->
-<div id="alert-modal" class="fixed bottom-6 right-6 z-[150] bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl hidden transition-all duration-300" style="transform: translateY(20px); opacity: 0;">
-    <p id="alert-message"></p>
-</div>
-<script src="main.js"></script>
- <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+    <!-- Modal Thông Báo (Chung) -->
+    <div id="alert-modal" class="fixed bottom-6 right-6 z-[150] bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl hidden transition-all duration-300" style="transform: translateY(20px); opacity: 0;">
+        <p id="alert-message"></p>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
 
     <script>
         new CozeWebSDK.WebChatClient({
 
-        config: {
-        type: 'bot',
-        bot_id: '7573626748227616821',
-        isIframe: false,
-        },
+            config: {
+                type: 'bot',
+                bot_id: '7573626748227616821',
+                isIframe: false,
+            },
 
-        auth: {
-        type: 'token',
-        token: 'pat_Ehq9D3fhPg4nAKgS05CYg5VzcyHYa1BkpEe0lpXyWdFzpFPczJDDfojMhJakNHqZ',
-        onRefreshToken: async () => 'token'
-        },
+            auth: {
+                type: 'token',
+                token: 'pat_Ehq9D3fhPg4nAKgS05CYg5VzcyHYa1BkpEe0lpXyWdFzpFPczJDDfojMhJakNHqZ',
+                onRefreshToken: async() => 'token'
+            },
 
-    });
+        });
     </script>
 
 </body>
+
 </html>
