@@ -1,0 +1,116 @@
+/* CSS tùy chỉnh cho các hiệu ứng */
+
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Hiệu ứng cho thanh điều hướng khi cuộn */
+
+.nav-scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+
+/* Hiệu ứng cho phần "cuộn xuống" ở trang chủ */
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Tùy chỉnh màu sắc cho các nút Quiz */
+
+.quiz-option:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Hiệu ứng đèn lồng/lời nguyện */
+
+.wish-lantern {
+    position: absolute;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    background-color: #FFFBEB;
+    /* pastel-yellow */
+    color: #D97706;
+    /* theme-earth */
+    border: 1px solid #FDE68A;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    animation: float-up 3s ease-in-out forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh) scale(1.4);
+        opacity: 0;
+    }
+}
+
+.stars {
+    background: black url(./img/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 150%;
+    height: 100%;
+}
+
+.twinkling {
+    width: 150%;
+    height: 100%;
+    background: transparent url("./img/twinkling.png") repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: move-background 70s linear infinite;
+}
+
+@keyframes move-background {
+    from {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        transform: translate3d(1000px, 0px, 0px);
+    }
+}
