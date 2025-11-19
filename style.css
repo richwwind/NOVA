@@ -1,56 +1,54 @@
-/* CSS tùy chỉnh cho các hiệu ứng */
 body {
-    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    /* position: relative; */
 }
 
-html{
-    scroll-behavior: smooth;
-}
-@keyframes reveal {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-/* Hiệu ứng cho thanh điều hướng khi cuộn */
-.nav-scrolled {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    backdrop-filter: blur(8px);
-}
-/* Hiệu ứng cho phần "cuộn xuống" ở trang chủ */
-.reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.reveal-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* Tùy chỉnh màu sắc cho các nút Quiz */
-.quiz-option:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-/* Hiệu ứng đèn lồng/lời nguyện */
-.wish-lantern {
+#sea {
     position: absolute;
-    padding: 0.75rem 1.25rem;
-    border-radius: 9999px;
-    background-color: #FFFBEB; /* pastel-yellow */
-    color: #D97706; /* theme-earth */
-    border: 1px solid #FDE68A;
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    white-space: nowrap;
-    animation: float-up 3s ease-in-out forwards;
-    will-change: transform, opacity;
+    bottom: 0;
+    background: linear-gradient(180deg, #000000 26%, #05031b8f 76%);
+    height: 35vh;
+    width: 100%;
 }
 
+#sea-water {
+    filter: url("#turbulence");
+    background-color: #afb77067;
+    height: 100%;
+}
 
-@keyframes float-up {
-    0%   { transform: translateY(0) scale(0.8); opacity: 0; }
-  15%  { opacity: 1; }
-  100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+.stars {
+    background: black url(./img/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: -2;
+}
+
+.twinkling {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("./img/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    animation: move-background 70s linear infinite;
+}
+
+@keyframes move-background {
+    from {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        transform: translate3d(1000px, 0px, 0px);
+    }
 }
