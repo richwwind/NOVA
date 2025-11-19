@@ -23,6 +23,7 @@ tourFormModal.addEventListener('submit', function(e) {
     e.preventDefault();
     iframModal.classList.remove('hidden');
     iframeEl.src = res;
+    document.querySelector('.left a').href = res;
 });
 
 // close iframe
