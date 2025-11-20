@@ -1,8 +1,39 @@
-// set signup link
-const btnSignup = document.getElementById('btn-signup');
-btnSignup.addEventListener('click', function(){
-    window.location.href = 'https://danangopentour.vn/tour-ngu-hanh-son-hoi-an-1-ngay.html'; // Thay đổi thành link Google Forms thực tế
+const tourBtn = ["tour1","tour2","tour3"];
+const tourLink = [
+    "https://www.vietnambooking.com/du-lich/tour-ngu-hanh-son-hoi-an-1-ngay.html",
+    "https://danangopentour.vn/tour-ngu-hanh-son-hoi-an-1-ngay.html",
+    "https://saodieu.vn/travel/du-lich/tour-du-lich-lang-da-non-nuoc-pho-co-hoi-an-nua-ngay.html"
+];
+
+let currentLink = null;
+tourBtn.forEach((btn, index) => {
+    document.getElementById(btn).addEventListener('click', () => {
+        currentLink = tourLink[index];
+    });
 });
+
+
+// set modal iframe
+const modalIframe = document.getElementById('iframeModal');
+const tourFormSend = document.getElementById('tour-form');
+const iframePreview = document.getElementById('iframePreview');
+const detailLink = document.getElementById('detailLink');
+
+tourFormSend.addEventListener('submit', (e) => {
+    e.preventDefault();
+    iframePreview.src = currentLink;
+    modalIframe.classList.remove('hidden');
+    detailLink.href = currentLink;
+    console.log(iframePreview.src);
+});
+
+
+// close modal iframe
+function closeIframeModal() {
+    modalIframe.classList.add('hidden');
+    iframePreview.src = '';
+    detailLink.href = '';
+}
 
 
 
